@@ -1,9 +1,10 @@
 <script>
-import Project from './Project.vue';
-import { store } from '../store.js';
+import Project from '../components/Project.vue';
+import { store } from '../store';
 import axios from 'axios';
 
 export default {
+    name: 'appMain',
     components: {
         Project
     },
@@ -29,9 +30,6 @@ export default {
 
 <template lang="">
     <div class="container">
-        <header>
-            <h1>BOOLFOLIO</h1>
-        </header>
         <div class="project-container">
             <h1>PROGETTI</h1>
             <Project v-for="project, index in projects" :key="index" :project="project" />
