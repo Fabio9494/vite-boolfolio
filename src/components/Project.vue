@@ -2,6 +2,7 @@
 import { store } from '../store.js';
 
 export default {
+    name:'project',
     props: {
         project: Object,
     },
@@ -16,6 +17,7 @@ export default {
 <template lang="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <div class=project>
+            <router-link :to="{name: 'SingleProject', params: {slug: project.slug}}">
             <div class="information">
                 <p class="text">Titolo: {{ project.title }}</p>
                 <p class="text">Data: {{project.date}}</p>
@@ -24,6 +26,7 @@ export default {
                         alt=""> -->
                 <img :src="project.img !== null ? `${store.baseUrl}/storage/${project.img}` : `${store.baseUrl}/storage/img/imgnull.jpg`" alt="">
             </div>
+        </router-link>
         </div>
 </template>
 

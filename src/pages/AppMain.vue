@@ -15,7 +15,7 @@ export default {
         }
     },
     created() {
-        this.getProject();
+        this.getProject()
     },
     methods: {
         getProject() {
