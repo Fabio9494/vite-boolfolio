@@ -12,6 +12,10 @@ export const store = reactive({
             name: 'appMain',
             label: 'Blog'
 
-        }
+        },
+        {
+            name: 'Contacts',
+            label: 'Contatti'
+        },
     ]
 });
